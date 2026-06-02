@@ -19,12 +19,11 @@ int main(void){
     return 1;
   Turtle *t = turtleAppGetTurtle(app);
   turtlePenUp(t);
-  turtleGoTo(t,600.0f,550.0f);
+  turtleGoTo(t,500.0f,350.0f);
   turtlePenDown(t);
   turtleSetColor(t,255,100,0);
-  turtleSetSpeed(t,5.0f);
-  turtleLeft(t,90.0f);
-  levy(t , 100 ,4 );
+  turtleSetSpeed(t,8.0f);
+  levy(t , 200 ,6 );
   turtleAppRun(app);
   turtleAppDestroy(app);
   return 0;
