@@ -14,7 +14,7 @@ void levy( Turtle *turtle , float length , int depth ) {
 }
 
 int main(void){
-  TurtleApp *app=turtleAppCreate(1200,600,"test line");
+  TurtleApp *app=turtleAppCreate(1000,600,"test line");
   if(app==NULL)
     return 1;
   Turtle *t = turtleAppGetTurtle(app);
