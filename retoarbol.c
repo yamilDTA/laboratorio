@@ -8,9 +8,12 @@ void fractalTree( Turtle *turtle, float length , int depth ) {
   turtleLeft ( turtle , 30) ;
   fractalTree ( turtle , length * 0.7 , depth - 1) ;
 
-  turtleRight ( turtle , 60) ;
+  turtleRight ( turtle , 30) ;  //esta pone la rama del medio como antes moviamos defrente 60 a la derecha 
   fractalTree ( turtle , length * 0.7 , depth - 1) ;
   
+  turtleRight ( turtle , 30) ;
+  fractalTree ( turtle , length * 0.7 , depth - 1) ;
+
   turtleLeft( turtle, 30);  
   turtleBackward ( turtle , length ) ;
   
