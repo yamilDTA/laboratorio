@@ -4,23 +4,28 @@ void fractalTree( Turtle *turtle, float length , int depth ) {
   if( depth == 0 || length < 5)
     return ;
   
-  if( depth > 5)
-	  turtleSetColor ( turtle , 120 , 70 , 20) ;
-  else
-	  turtleSetColor ( turtle , 0 , 200 , 0) ;
-  
+  if( depth > 5){
+	  turtleSetColor ( turtle , 120 , 70 , 20) ; //marron
+  }else if (depth >2){
+	  turtleSetColor ( turtle , 100 ,255, 100);  //verde mas claro
+  }else{
+	  turtleSetColor ( turtle , 0 , 200 , 0) ;  //verde
+  }
   
   turtleForward ( turtle , length ) ;
 
-  turtleLeft ( turtle , 30) ;
+  turtleLeft ( turtle , 45) ;
   fractalTree ( turtle , length * 0.7 , depth - 1) ;
 
-  turtleRight ( turtle , 60) ;
+  turtleRight ( turtle , 90) ;
   fractalTree ( turtle , length * 0.7 , depth - 1) ;
   
-  turtleLeft( turtle, 30);  
-  turtleBackward ( turtle , length ) ;
-  
+  turtleLeft( turtle, 45);
+
+turtlePenUp(turtle);
+turtleBackward ( turtle , length ) ;
+turtlePenDown (turtle);
+	
 }
 
 
@@ -33,7 +38,7 @@ int main(void){
   turtleGoTo(t,600.0f,550.0f);
   turtlePenDown(t);
   turtleSetColor(t,128,64,0);
-  turtleSetSpeed(t,5.0f);
+  turtleSetSpeed(t,8.0f);
   turtleLeft(t,90.0f);
   fractalTree(t , 80 ,7 );
   turtleAppRun(app);
