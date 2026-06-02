@@ -1,7 +1,7 @@
 #include"turtlec.h"
 
 void fractalTree( Turtle *turtle, float length , int depth ) {
-  if( depth == 0 || length < 5)
+  if( depth == 0 || length < 1) //algunas ramas no se dibujan por el tamaño tan pequeño modificamos a 1
     return ;
   
   if( depth > 5){
@@ -40,7 +40,7 @@ int main(void){
   turtleSetColor(t,128,64,0);
   turtleSetSpeed(t,8.0f);
   turtleLeft(t,90.0f);
-  fractalTree(t , 80 ,7 );
+  fractalTree(t ,200 , 8 );
   turtleAppRun(app);
   turtleAppDestroy(app);
   return 0;
