@@ -23,7 +23,7 @@ int main(void){
   turtlePenDown(t);
   turtleSetColor(t,255,100,0);
   turtleSetSpeed(t,8.0f);
-  levy(t , 200 ,6 );
+  levy(t , 200 ,7 );
   turtleAppRun(app);
   turtleAppDestroy(app);
   return 0;
