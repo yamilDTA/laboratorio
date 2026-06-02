@@ -30,12 +30,12 @@ turtlePenDown (turtle);
 
 
 int main(void){
-  TurtleApp *app=turtleAppCreate(1200,600,"test line");
+  TurtleApp *app=turtleAppCreate(1000,600,"test line");
   if(app==NULL)
     return 1;
   Turtle *t = turtleAppGetTurtle(app);
   turtlePenUp(t);
-  turtleGoTo(t,600.0f,550.0f);
+  turtleGoTo(t,500.0f,550.0f);
   turtlePenDown(t);
   turtleSetColor(t,128,64,0);
   turtleSetSpeed(t,8.0f);
